@@ -1,0 +1,23 @@
+numeric_predictors:
+  - age
+  - hours-per-week
+
+categorical_predictors:
+  - workclass
+  - marital-status
+  - race
+  - gender
+  
+
+treatment:
+  - grad-degree
+
+target: income
+
+s_learner_params:
+  n_estimators: 50
+  max_depth: 3
+  learning_rate: 0.1
+  subsample: 0.5
+  min_child_weight: 0
+  eval_metric: auc
