@@ -1,0 +1,21 @@
+numeric:
+  - age
+  - hours-per-week
+
+categorical:
+  - workclass
+  - marital-status
+  - race
+  - gender
+  - grad-degree # This is the treatment.
+
+target: income
+
+learner_params:
+  n_estimators: 50
+  max_depth: 3
+  learning_rate: 0.1
+  subsample: 0.5
+  min_child_weight: 0
+  eval_metric: auc
+  random_state: 7700

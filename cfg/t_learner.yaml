@@ -1,23 +1,24 @@
-numeric_predictors:
+numeric:
   - age
   - hours-per-week
 
-categorical_predictors:
+categorical:
   - workclass
   - marital-status
   - race
   - gender
-  
+  # We don't include the treatment in the T-learner's features, because it's invariant in the
+  # data for each model.
 
-treatment:
-  - grad-degree
+treatment: grad-degree
 
 target: income
 
-s_learner_params:
+learner_params:
   n_estimators: 50
   max_depth: 3
   learning_rate: 0.1
   subsample: 0.5
   min_child_weight: 0
   eval_metric: auc
+  random_state: 7700
